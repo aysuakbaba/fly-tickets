@@ -1,12 +1,22 @@
 const express = require("express");
 const router = express.Router();
-const auth = require("../middleware/auth");
 const isAdmin = require("../middleware/isAdmin");
 const flightController = require("../controllers/flight");
+const { query } = require("express-validator");
 
-router.post("/", auth, isAdmin, flightController.createFlight);
-router.get("/", auth, flightController.getFlights);
-router.put("/:id", auth, isAdmin, flightController.updateFlight);
-router.delete("/:id", auth, isAdmin, flightController.deleteFlight);
+router
+  .route("/")
+  .get(
+    [
+      (query("from_city").isString().optional(),
+      query("to_city").isString().optional()),
+    ],
+    flightController.getFlights
+  )
+  .post(isAdmin, flightController.createFlight);
+router
+  .route("/:id")
+  .put(isAdmin, flightController.updateFlight)
+  .delete(isAdmin, flightController.deleteFlight);
 
 module.exports = router;

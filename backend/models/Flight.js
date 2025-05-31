@@ -1,12 +1,13 @@
 const mongoose = require("mongoose");
+const City = require("../models/City");
 const fligthSchema = new mongoose.Schema({
   from_city: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "City",
     required: true,
   },
   to_city: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "City",
     required: true,
   },

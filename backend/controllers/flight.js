@@ -1,5 +1,6 @@
 const Flight = require("../models/Flight");
 const City = require("../models/City");
+const { checkValidationError } = require("../utils/validation");
 
 exports.createFlight = async (req, res) => {
   try {
@@ -12,21 +13,32 @@ exports.createFlight = async (req, res) => {
 };
 
 exports.getFlights = async (req, res) => {
+  checkValidationError(req);
   try {
-    const flights = await Flight.find()
+    const { from_city, to_city, departure_time } = req.query;
+    const query = {};
+    if (from_city && to_city) {
+      query.from_city = from_city;
+      query.to_city = to_city;
+    }
+    if (departure_time) {
+      const date = new Date(departure_time);
+      const nextDay = new Date(date);
+      nextDay.setDate(date.getDate() + 1);
+
+      query.departure_time = {
+        $gte: date,
+        $lt: nextDay,
+      };
+    }
+    const flights = await Flight.find(query)
       .populate({
         path: "from_city",
         model: "City",
-        localField: "from_city",
-        foreignField: "city_id",
-        justOne: true,
       })
       .populate({
         path: "to_city",
         model: "City",
-        localField: "to_city",
-        foreignField: "city_id",
-        justOne: true,
       });
     res.json(flights);
   } catch (err) {
@@ -40,7 +52,6 @@ exports.updateFlight = async (req, res) => {
     const flight = await Flight.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
-    console.log("flight", flight);
     res.json(flight);
   } catch (err) {
     res.status(400).json({ error: err.message });

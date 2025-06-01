@@ -47,6 +47,17 @@ exports.getFlights = async (req, res) => {
   }
 };
 
+exports.getFlightByID = async (req, res) => {
+  try {
+    const flight = await Flight.findById(req.params.id);
+    if (!flight) return res.status(404).json({ error: "Flight cannot found" });
+    res.json(flight);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: "Server Error" });
+  }
+};
+
 exports.updateFlight = async (req, res) => {
   try {
     const flight = await Flight.findByIdAndUpdate(req.params.id, req.body, {

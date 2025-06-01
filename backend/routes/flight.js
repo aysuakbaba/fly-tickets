@@ -16,6 +16,7 @@ router
   .post(isAdmin, flightController.createFlight);
 router
   .route("/:id")
+  .get(flightController.getFlightByID)
   .put(isAdmin, flightController.updateFlight)
   .delete(isAdmin, flightController.deleteFlight);
 

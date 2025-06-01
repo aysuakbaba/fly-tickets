@@ -49,7 +49,15 @@ exports.getFlights = async (req, res) => {
 
 exports.getFlightByID = async (req, res) => {
   try {
-    const flight = await Flight.findById(req.params.id);
+    const flight = await Flight.findById(req.params.id)
+      .populate({
+        path: "from_city",
+        model: "City",
+      })
+      .populate({
+        path: "to_city",
+        model: "City",
+      });
     if (!flight) return res.status(404).json({ error: "Flight cannot found" });
     res.json(flight);
   } catch (err) {

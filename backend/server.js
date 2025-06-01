@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const authRoutes = require("./routes/auth");
 const flightRoutes = require("./routes/flight");
@@ -7,6 +8,7 @@ const cityRoutes = require("./routes/cities");
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
 app.use(express.json());
 
 mongoose

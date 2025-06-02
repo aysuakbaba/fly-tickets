@@ -16,7 +16,7 @@ const ticketSchema = new mongoose.Schema({
     ref: "Flight",
     required: true,
   },
-  seatNumber: String,
+  seat_number: String,
   booking_date: Date,
 });
 

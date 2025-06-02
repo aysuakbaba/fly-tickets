@@ -1,10 +1,15 @@
 const Flight = require("../models/Flight");
 const City = require("../models/City");
+const Ticket = require("../models/Ticket");
 const { checkValidationError } = require("../utils/validation");
 
 exports.createFlight = async (req, res) => {
   try {
-    const flight = new Flight(req.body);
+    const customFlightId = `TCK${Math.floor(100 + Math.random() * 900)}`;
+    const flight = new Flight({
+      ...req.body,
+      reference_id: customFlightId,
+    });
     await flight.save();
     res.status(201).json(flight);
   } catch (err) {
@@ -58,8 +63,19 @@ exports.getFlightByID = async (req, res) => {
         path: "to_city",
         model: "City",
       });
+
     if (!flight) return res.status(404).json({ error: "Flight cannot found" });
-    res.json(flight);
+
+    const tickets = await Ticket.find({ flight_id: flight._id }).select(
+      "seat_number -_id"
+    );
+
+    const reservedSeats = tickets.map((ticket) => ticket.seat_number);
+
+    res.json({
+      ...flight.toObject(),
+      reservedSeats,
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json({ error: "Server Error" });

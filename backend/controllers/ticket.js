@@ -8,7 +8,7 @@ exports.bookTicket = async (req, res) => {
       passenger_surname,
       passenger_email,
       flight_id,
-      seatNumber,
+      seat_number,
     } = req.body;
     const flight = await Flight.findById(flight_id);
     if (!flight) return res.status(404).json({ error: "Flight not found" });
@@ -20,7 +20,7 @@ exports.bookTicket = async (req, res) => {
       passenger_surname,
       passenger_email,
       flight_id,
-      seatNumber,
+      seat_number,
       booking_date: new Date(),
     });
 

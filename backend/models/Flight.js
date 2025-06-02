@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const City = require("../models/City");
 const fligthSchema = new mongoose.Schema({
+  reference_id: String,
   from_city: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "City",

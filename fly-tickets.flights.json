@@ -1,0 +1,259 @@
+[{
+  "_id": {
+    "$oid": "683c66543a8226c292f9b251"
+  },
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d4d"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d54"
+  },
+  "departure_time": {
+    "$date": "2025-12-04T13:30:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-12-04T14:15:00.000Z"
+  },
+  "price": 560,
+  "seats_total": 100,
+  "seats_available": 20,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683c66823a8226c292f9b253"
+  },
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d5a"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d5e"
+  },
+  "departure_time": {
+    "$date": "2025-09-04T14:05:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-09-04T15:15:00.000Z"
+  },
+  "price": 560,
+  "seats_total": 100,
+  "seats_available": 20,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683cba899c76fd0cd2dceab0"
+  },
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d5a"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d5e"
+  },
+  "departure_time": {
+    "$date": "2025-09-04T14:05:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-09-04T15:15:00.000Z"
+  },
+  "price": 5120,
+  "seats_total": 150,
+  "seats_available": 20,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683cbaa39c76fd0cd2dceab2"
+  },
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d5a"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d5e"
+  },
+  "departure_time": {
+    "$date": "2025-09-04T14:05:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-09-04T15:15:00.000Z"
+  },
+  "price": 5120,
+  "seats_total": 150,
+  "seats_available": 20,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683cbab79c76fd0cd2dceab4"
+  },
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d5a"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d5e"
+  },
+  "departure_time": {
+    "$date": "2025-09-04T14:05:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-09-04T15:15:00.000Z"
+  },
+  "price": 5120,
+  "seats_total": 150,
+  "seats_available": 20,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683cbafba903ce9190eabd6e"
+  },
+  "reference_id": "TCK448",
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d5a"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d5e"
+  },
+  "departure_time": {
+    "$date": "2025-09-04T14:05:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-09-04T15:15:00.000Z"
+  },
+  "price": 5120,
+  "seats_total": 150,
+  "seats_available": 20,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683cbb3fa903ce9190eabd70"
+  },
+  "reference_id": "TCK118",
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d5d"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d5f"
+  },
+  "departure_time": {
+    "$date": "2025-09-04T14:05:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-09-04T15:15:00.000Z"
+  },
+  "price": 5120,
+  "seats_total": 150,
+  "seats_available": 20,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683cc2f5a903ce9190eabdd5"
+  },
+  "reference_id": "TCK891",
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d5d"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d5f"
+  },
+  "departure_time": {
+    "$date": "2025-09-04T14:05:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-09-04T15:15:00.000Z"
+  },
+  "price": 5120,
+  "seats_total": 60,
+  "seats_available": 20,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683de0b1f04d7bc44fec7047"
+  },
+  "reference_id": "TCK234",
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d38"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d4d"
+  },
+  "departure_time": {
+    "$date": "2025-04-04T14:05:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-04-04T15:15:00.000Z"
+  },
+  "price": 1120,
+  "seats_total": 36,
+  "seats_available": 15,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683e012757134bf8aa93c706"
+  },
+  "reference_id": "TCK519",
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d39"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d3c"
+  },
+  "departure_time": {
+    "$date": "2025-12-21T18:30:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-12-21T19:30:00.000Z"
+  },
+  "price": 345,
+  "seats_total": 23,
+  "seats_available": 12,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683e018f57134bf8aa93c709"
+  },
+  "reference_id": "TCK425",
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d3b"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d39"
+  },
+  "departure_time": {
+    "$date": "2025-12-21T18:30:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-12-21T19:30:00.000Z"
+  },
+  "price": 200,
+  "seats_total": 100,
+  "seats_available": 50,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683e023957134bf8aa93c713"
+  },
+  "reference_id": "TCK612",
+  "from_city": {
+    "$oid": "683b082bc955e5a8b4853d3c"
+  },
+  "to_city": {
+    "$oid": "683b082bc955e5a8b4853d39"
+  },
+  "departure_time": {
+    "$date": "2025-12-21T18:24:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2025-12-21T19:30:00.000Z"
+  },
+  "price": 300,
+  "seats_total": 100,
+  "seats_available": 23,
+  "__v": 0
+}]

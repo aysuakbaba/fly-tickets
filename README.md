@@ -1,6 +1,6 @@
 # ✈️ FlyTicket – Airline Booking Web Application
 
-FlyTicket is a full-stack web application developed for an airline company. It allows users to search and book flights, while administrators can manage flight listings through a dedicated interface.
+FlyTicket is a full-stack web app made for an airline company. It lets users search for and book flights easily, and gives admins a simple way to manage flights through their own dashboard.
 
 ## 🚀 Features
 

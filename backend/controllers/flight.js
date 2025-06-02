@@ -5,7 +5,43 @@ const { checkValidationError } = require("../utils/validation");
 
 exports.createFlight = async (req, res) => {
   try {
+    const { from_city, to_city, departure_time } = req.body;
+    const query = {};
+    const query2 = {};
     const customFlightId = `TCK${Math.floor(100 + Math.random() * 900)}`;
+
+    if (from_city && departure_time) {
+      query.from_city = from_city;
+      query.departure_time = departure_time;
+    }
+
+    const flights = await Flight.find(query).populate({
+      path: "from_city",
+      model: "City",
+    });
+
+    if (flights?.length > 0) {
+      return res.status(400).json({
+        error: "There is a flight with the same city and departure time",
+      });
+    }
+
+    if (to_city && arrival_time) {
+      query2.to_city = to_city;
+      query2.arrival_time = arrival_time;
+    }
+
+    const flights2 = await Flight.find(query2).populate({
+      path: "to_city",
+      model: "City",
+    });
+
+    if (flights2?.length > 0) {
+      return res.status(400).json({
+        error: "There is a flight with the same city and arrival time",
+      });
+    }
+
     const flight = new Flight({
       ...req.body,
       reference_id: customFlightId,

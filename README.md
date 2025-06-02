@@ -91,3 +91,10 @@ JWT_SECRET=supersecretkey12345
 ```bash
 VITE_API_URL=http://localhost:3000/api
 ```
+
+### ✨ UI Screenshots
+
+![Alt text](/images/sc1.png)
+![Alt text](/images/sc2.png)
+![Alt text](/images/sc3.png)
+![Alt text](/images/sc4.png)

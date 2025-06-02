@@ -5,7 +5,7 @@ const { checkValidationError } = require("../utils/validation");
 
 exports.createFlight = async (req, res) => {
   try {
-    const { from_city, to_city, departure_time } = req.body;
+    const { from_city, to_city, departure_time, arrival_time } = req.body;
     const query = {};
     const query2 = {};
     const customFlightId = `TCK${Math.floor(100 + Math.random() * 900)}`;
